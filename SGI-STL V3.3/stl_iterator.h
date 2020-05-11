@@ -934,6 +934,7 @@ public:
   ostream_iterator(ostream& __s, const char* __c) 
     : _M_stream(&__s), _M_string(__c)  {}
   ostream_iterator<_Tp>& operator=(const _Tp& __value) { 
+    //note by lanzi:ostream_iterator assign option invoke the operator<< actually
     *_M_stream << __value;
     if (_M_string) *_M_stream << _M_string;
     return *this;

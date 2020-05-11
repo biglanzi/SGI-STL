@@ -45,6 +45,17 @@ struct forward_iterator_tag : public input_iterator_tag {};
 struct bidirectional_iterator_tag : public forward_iterator_tag {};
 struct random_access_iterator_tag : public bidirectional_iterator_tag {};
 
+
+//note by lanzi:all iterator must match the five elements:
+//1.iterator_category
+//2.value_type
+//3.difference_type
+//4.pointer
+//5.reference
+//if we want design our own iterator,to let it work well with stl components
+//we should define the five member type,as well
+
+
 // The base classes input_iterator, output_iterator, forward_iterator,
 // bidirectional_iterator, and random_access_iterator are not part of
 // the C++ standard.  (They have been replaced by struct iterator.)
